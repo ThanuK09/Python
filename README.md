@@ -68,6 +68,8 @@ print(fruits[1])  Output:Apple
 print(fruits[0:1])
 To add an item-append
 
+
+
 a=["Dosa","Roti"]
 b=["tea","coffe"]
 a.remove("Dosa")
