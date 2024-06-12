@@ -104,4 +104,12 @@ for i in range(1,len(arr)+1):
     if i not in arr:
         print("missing element is",i)
 
- 
+Second largest:
+ rr=[]
+n=int(input("enter the size of array"))
+for i in range(0,n):
+    element=input("Enter element of array ")
+    arr.append(element)
+    sorted_list=arr.sort()
+    second_largest=sorted_list[-2]
+    print("Second largest element is:", second_largest)
