@@ -113,3 +113,28 @@ for i in range(0,n):
     sorted_list=arr.sort()
     second_largest=sorted_list[-2]
     print("Second largest element is:", second_largest)
+
+
+To divide two numbers without using operator
+
+def divide(dividend, divisor):
+    if divisor == 0:
+        raise ValueError("Cannot divide by zero")
+
+    quotient = 0
+    sign = 1 if (dividend < 0) == (divisor < 0) else -1  # Determine the sign of the result
+
+    dividend = abs(dividend)
+    divisor = abs(divisor)
+
+    while dividend >= divisor:
+        dividend -= divisor
+        quotient += 1
+
+    return sign * quotient
+
+
+dividend=int(input("enter the number"))
+divisor=int(input("enter the number"))
+result = divide(dividend, divisor)
+print(f"The result of dividing {dividend} by {divisor} is {result}")
