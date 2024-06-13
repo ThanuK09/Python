@@ -138,3 +138,43 @@ dividend=int(input("enter the number"))
 divisor=int(input("enter the number"))
 result = divide(dividend, divisor)
 print(f"The result of dividing {dividend} by {divisor} is {result}")
+
+
+
+rr=[]
+n=int(input("enter the size of array"))
+for i in range(0,n):
+    element=input("Enter element of array ")
+    arr.append(element)
+    sorted_list=arr.sort()
+    second_largest=sorted_list[-2]
+    print("Second largest element is:", second_largest)
+
+
+def min_jumps(arr):
+    n = len(arr)
+    if n == 1:
+        return 0
+    if arr[0] == 0:
+        return -1
+    
+    jumps = 1 
+    max_reach = arr[0]
+    steps = arr[0]
+    for i in range(1, n):
+        if i == n - 1:
+            return jumps
+        max_reach = max(max_reach, i + arr[i])
+        steps -= 1
+        if steps == 0:
+            jumps += 1
+            if i >= max_reach:
+                return -1
+            steps = max_reach - i
+
+    return -1
+
+arr = [1,3,5,8,9,2,6,7,6,8,9]
+n = 11
+result = min_jumps(arr)
+print(result)
