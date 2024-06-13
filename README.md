@@ -119,7 +119,7 @@ To divide two numbers without using operator
 
 def divide(dividend, divisor):
     if divisor == 0:
-        raise ValueError("Cannot divide by zero")
+        print("Cannot divide by zero")
 
     quotient = 0
     sign = 1 if (dividend < 0) == (divisor < 0) else -1  # Determine the sign of the result
