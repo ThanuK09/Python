@@ -25,21 +25,21 @@ type-shows the datatype. print(type(a))
 complex number-number followed by imaginary value
 
 String:
-a="My name is Sharmitha"
+a="My name is Thanmayee"
 print(a)
 Triple quote
 
-a="Sharmi"
+a="Thanma"
 print(a[3])
 
 for i in a:
 print(i)
-Output: S
+Output: T
 	H
 	A
-	R
+	N
 	M
-	I
+	A
 
 print(len(a))
 
